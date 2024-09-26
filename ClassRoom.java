@@ -1,10 +1,16 @@
 public class ClassRoom
 {
-  private String roomNr;
-  private boolean computer;
-  private int       size;
+  private String roomNr;    //consists building floor and room number
+  private boolean computer; //are there computer in the rooms
+  private int       size;  //number of seats
   private boolean beamer;
   private int windows;
+  
+  /*
+   * Constructor
+   * Parameters: Room number, computer, size
+   * It creates a new Instance of the class ClassRoom
+   */
       
   
   public ClassRoom(String newRoomNr, boolean newComputer, int newSize)
