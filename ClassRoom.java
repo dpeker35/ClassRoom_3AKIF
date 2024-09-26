@@ -22,7 +22,7 @@ public class ClassRoom
   
   
   
-  
+  //void means no answer, that's why we don't write "return"
    public void setRoomNr(String newRoomNr)
   {
       roomNr = newRoomNr;
@@ -39,12 +39,12 @@ public class ClassRoom
   }
   
   
-  
+  //if we want an answer, then we have put the command "return"
   public String getRoomNr()
   {
       return roomNr;
   }
-  
+  //getmethods are public
   public boolean getComputer()
   {
       return computer;
