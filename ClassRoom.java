@@ -60,6 +60,11 @@ public class ClassRoom
   
   
   
+  public void printClassoom()
+  {
+      System.out.println("Classroom " + roomNr + " - Computer: " + computer + " - " + size + "Students" );
+  }
+  
   
   
   
@@ -67,3 +72,7 @@ public class ClassRoom
   
   
 }
+
+
+
+
