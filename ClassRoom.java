@@ -51,7 +51,15 @@ public class ClassRoom
     
     public void setSize(int size)
     {
+        if((size >=10) && (size <= 40))
+        {
         this.size = size;
+        }
+        else
+        {
+            System.out.println("Erorr: wrong size. Should be between 10 and 40!");
+            this.size = 25;
+        }
     }
     
     public String getRoomNr()
@@ -75,17 +83,20 @@ public class ClassRoom
         //A.5.20
         //Extra.2.22
         
-        int pos1;
-        int pos2;
-        String floor;
+      int pos1;
+      int pos2;
+      String floor;
+      
+      
         
         //1
         //5
         pos1 = roomNr.indexOf(".") + 1;
         pos2 = roomNr.indexOf(".", pos1);
-        floor = roomNr.substring(pos1, pos2);
+        floor = roomNr.substring(pos1,pos2);
         
         return floor;
+       
     }
     
     public void printClassRoom()
