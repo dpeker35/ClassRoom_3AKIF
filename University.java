@@ -6,21 +6,28 @@
     
     public void add(ClassRoom newClassRoom)
     {
+      if(newClassRoom != null)
+      {
+        if(newClassRoom.getUniversity() == null)
+        {
         if (room0 == null)
         {
             room0 = newClassRoom;
+            newClassRoom.setUniversity(this);
         }
         else
         {
             if (room1 == null)
             {
                 room1 = newClassRoom;
+                newClassRoom.setUniversity(this);
             }
             else
             {
                 if (room2 == null)
                 {
                     room2 = newClassRoom;
+                    newClassRoom.setUniversity(this);
                 }
                 else
                 {
@@ -29,7 +36,54 @@
             }
         }
     }
+    else
+    {
+        System.out.println("Error: already in another university!");
+    }
+}
+    else
+    {
+        System.out.println("Error: no classroom!");
+    }
+}
+
+
+
+public void remove(ClassRoom classRoom)
+{
+    if(classRoom != null)
+    {
+       if(room0 == classRoom)
+       {
+          room0 = null;
+          classRoom.setUniversity(null);
+       }
+    }
+    else
+    {
+        if(room1 == classRoom)
+        {
+        room0 = null;
+          classRoom.setUniversity(null);
+        }
+        else
+        {
+            if(room1 == classRoom)
+        {
+        room0 = null;
+          classRoom.setUniversity(null);
+        }
+        else
+        {
+            System.out.println("Error the room is not in our university!");
+        }
+    }
+}
+}
     
+
+
+
     public void printUniversity()
     {
         if (room0 != null)

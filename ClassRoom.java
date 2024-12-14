@@ -3,6 +3,7 @@ public class ClassRoom
     private String  roomNr;     // consists of building floor and room number
     private boolean computer;   // are there computers in the room
     private int     size;       // number of seats
+    private University university;
 
     /*
      * Constructor
@@ -41,8 +42,18 @@ public class ClassRoom
     public void setRoomNr(String roomNr)
     {
         // set the property roomNr to the value of the parameter newRoomNr
-        this.roomNr = roomNr;
+        if(roomNr != null)
+        {
+           this.roomNr = roomNr; 
+        }
+        else
+        {
+            System.out.println("Error: no valid room number!");
+            this.roomNr = "A.4.11";
+        }
     }
+        
+    
     
     public void setComputer(boolean computer)
     {
@@ -62,10 +73,17 @@ public class ClassRoom
         }
     }
     
+    public void setUniversity(University university)
+    {
+        this.university = university;
+    }
+    
     public String getRoomNr()
     {
         return roomNr;
     }
+        
+    
     
     public boolean getComputer()
     {
@@ -75,6 +93,11 @@ public class ClassRoom
     public int getSize()
     {
         return size;
+    }
+    
+    public University getUniversity()
+    {
+        return university;
     }
     
     public String getFloor()
